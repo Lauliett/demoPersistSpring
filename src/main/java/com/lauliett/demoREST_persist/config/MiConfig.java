@@ -18,7 +18,7 @@ public class MiConfig {
 methods = RequestMethod.GET)*/
 
     @Bean
-    public WebMvcConfigurer corsConfigurer(CorsRegistry registy){
+    public WebMvcConfigurer corsConfigurer(){
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry){
