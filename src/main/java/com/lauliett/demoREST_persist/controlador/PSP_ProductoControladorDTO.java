@@ -14,6 +14,7 @@ import com.lauliett.demoREST_persist.repository.PSP_ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -37,6 +38,7 @@ public class PSP_ProductoControladorDTO {
 	 * 
 	 * @return
 	 */
+	@CrossOrigin("origins = http://localhost:8090")
 	@GetMapping("/productoDTO")
 	//public List<PSP_Productos> obtenerTodos() {
 	public ResponseEntity<?> obtenerTodos() {
