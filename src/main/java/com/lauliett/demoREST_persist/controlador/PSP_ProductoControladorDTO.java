@@ -21,8 +21,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+/*@CrossOrigin(origins= {"http://localhost:8090", "http://192.168.50.70:8080/"}, 
+methods = RequestMethod.GET)*/
 @RestController
 public class PSP_ProductoControladorDTO {
 
@@ -38,7 +41,7 @@ public class PSP_ProductoControladorDTO {
 	 * 
 	 * @return
 	 */
-	@CrossOrigin("origins = http://localhost:8090")
+	//@CrossOrigin("origins = http://localhost:8090")
 	@GetMapping("/productoDTO")
 	//public List<PSP_Productos> obtenerTodos() {
 	public ResponseEntity<?> obtenerTodos() {
